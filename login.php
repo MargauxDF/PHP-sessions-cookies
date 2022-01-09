@@ -1,9 +1,14 @@
-<?php require 'inc/head.php'; ?>
 <?php
-    if (isset($_POST['loginname'])) {
-        $_SESSION['loginname'] = $_POST['loginname'];
-        header('Location: index.php');
-    }
+require 'inc/head.php';
+
+if (!empty($_POST['loginname'])) {
+    $_SESSION['loginname'] = $_POST['loginname'];
+    header('Location: /');
+    exit();
+} else {
+    $errorMsg = 'Veuillez incrire vos identifiants svp';
+}
+
 ?>
 <div class="container" style="margin-top:40px">
     <div class="row">
