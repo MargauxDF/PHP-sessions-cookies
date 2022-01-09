@@ -15,8 +15,6 @@ if (isset($_GET['add_to_cart'])) {
         $_SESSION['cart'][$idProduct]++;
     }
 
-    print_r($_SESSION);
-
     header('Location : /');
     die();
 }
